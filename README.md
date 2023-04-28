@@ -4,7 +4,7 @@ Welcome to the Front end side of Type Master!
 
 npm i 
 
-2. create an environment.ts with this variable:
+2. create an environment.ts in the root directory with this variable:
 
 ```
 export const environment = {
