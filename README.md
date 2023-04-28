@@ -14,4 +14,4 @@ export const environment = {
 
 3. Then use in the CLI:
 
-ng serve --open
+npm start
