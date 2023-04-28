@@ -1,0 +1,129 @@
+.container {
+  margin-top: 100px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.gameMenu {
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 24px;
+  color: #fff;
+  background-color: #333;
+}
+
+.startButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(21, 182, 210);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: #3E8E41;
+}
+
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 0.8);
+}
+
+.timer {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.textContainer {
+  border-radius: 5px;
+  background: white;
+  padding: 10px;
+}
+
+.currentText {
+  margin-bottom: 10px;
+  padding: 15px;
+  user-select: none;
+}
+
+.textInput {
+  background: transparent;
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  outline: none;
+  width: 100%;
+  height: 8rem;
+  font-size: 1.25rem;
+  padding: 5px;
+  resize: none;
+}
+
+.textInput:focus {
+  border-color: black;
+}
+
+.correct.typed {
+  color: green;
+}
+
+.incorrect.typed {
+  color: red;
+  text-decoration: underline;
+}
+
+.scoreDisplay {
+  margin-left: auto;
+}
+
+.gameOverContainer {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin-top: 2rem;
+}
+
+.gameOverContainer div {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.gameOverContainer button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 1rem;
+  background-color: #1E90FF;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gameOverContainer button:hover {
+  background-color: #0066CC;
+}
+
+.gameOverContainer button[disabled] {
+  opacity: 0.5;
+}

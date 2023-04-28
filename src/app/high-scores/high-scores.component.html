@@ -1,0 +1,15 @@
+<div class="leaderBoard">
+  <h2>HIGH SCORES</h2>
+  <div class="labels">
+    <div>Rank</div>
+    <div>Score</div>
+    <div>Player</div>
+    <div>Achieved On</div>
+  </div>
+  <div *ngFor="let score of highScores; let i = index" class="leaderBoardEntry">
+    <div>{{ i + 1 }}</div>
+    <div>{{ score.score.toFixed(0) }}</div>
+    <div>{{ score.userEmail }}</div>
+    <div>{{ score.createdOn }}</div>
+  </div>
+</div>

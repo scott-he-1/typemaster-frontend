@@ -1,0 +1,43 @@
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="onRegister()"
+  class="formContainer"
+>
+  <div>Email</div>
+  <input type="text" formControlName="email" class="formInput" />
+  <div *ngIf="email?.invalid && email?.touched" class="formError">
+    Please enter a valid email
+  </div>
+  <div>Password</div>
+  <input type="password" formControlName="password" class="formInput" />
+  <div *ngIf="password?.invalid && password?.touched" class="formError">
+    Please enter a password
+  </div>
+  <div>Confirm Password</div>
+  <input type="password" formControlName="confirmPassword" class="formInput" />
+  <div
+    *ngIf="confirmPassword?.value.length <= 0 && confirmPassword?.touched"
+    class="formError"
+  >
+    Please enter a password
+  </div>
+  <div
+    *ngIf="
+      password?.value !== confirmPassword?.value && confirmPassword?.touched
+    "
+    class="formError"
+  >
+    Passwords must be the same
+  </div>
+  <div *ngIf="registerRequestError.length > 0" class="formError">
+    {{ registerRequestError }}
+  </div>
+  <button
+    [disabled]="
+      registerForm.invalid || password?.value !== confirmPassword?.value
+    "
+    class="formSubmit"
+  >
+    Register
+  </button>
+</form>

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="gameMenu" *ngIf="!gameInProgress && !gameFinished">
+    <div>Welcome to Type Master!</div>
+    <button (click)="startGame()" class="startButton">Play</button>
+  </div>
+
+  <div *ngIf="gameInProgress" class="scoreDisplay">Score: {{ score }}</div>
+  <div class="gameContainer" *ngIf="gameInProgress">
+    <div class="timer">{{ timer }}</div>
+    <div class="textContainer">
+      <div class="currentText" id="currentText">
+        <span *ngFor="let letter of currentTextArray">{{ letter }}</span>
+      </div>
+      <textarea
+        (input)="updateText()"
+        id="textInput"
+        class="textInput"
+        autofocus
+        [(ngModel)]="playerTextInput"
+      ></textarea>
+    </div>
+  </div>
+
+  <div class="gameOverContainer" *ngIf="!gameInProgress && gameFinished">
+    <div>Game over! <br />Your score: {{ score }}</div>
+    <button
+      (click)="postHighScore()"
+      [disabled]="scoreSubmitted || score === 0"
+    >
+      {{ score === 0 ? "You did not earn any points!" : "Submit your score" }}
+    </button>
+    <div>Would you like to play again?</div>
+    <button (click)="startGame()">Play again</button>
+  </div>
+</div>

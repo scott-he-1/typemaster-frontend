@@ -1,0 +1,20 @@
+<h1 class="greeting">Welcome to Type Master!<br />Please Login to play</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="formContainer">
+  <div>Email</div>
+  <input type="text" formControlName="email" class="formInput" />
+  <div *ngIf="email?.invalid && email?.touched" class="formError">
+    Please enter a valid email
+  </div>
+  <div>Password</div>
+  <input type="password" formControlName="password" class="formInput" />
+  <div *ngIf="password?.invalid && password?.touched" class="formError">
+    Please enter a password
+  </div>
+  <div *ngIf="loginRequestError.length > 0" class="formError">
+    {{ loginRequestError }}
+  </div>
+  <div class="createAccountLink">
+    Don't have an account? <a routerLink="/register">Create an account here</a>
+  </div>
+  <button [disabled]="loginForm.invalid" class="formSubmit">Login</button>
+</form>
