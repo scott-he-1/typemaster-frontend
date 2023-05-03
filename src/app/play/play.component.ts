@@ -107,6 +107,7 @@ export class PlayComponent {
   startGame() {
     this.gameInProgress = true;
     this.scoreSubmitted = false;
+    this.playerTextInput = '';
     this.score = 0;
     this.setCurrentRoundTime();
     this.startNextRound();
