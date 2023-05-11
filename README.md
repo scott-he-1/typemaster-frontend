@@ -4,14 +4,6 @@ Welcome to the Front end side of Type Master!
 
 npm i 
 
-2. create an environment.ts in the root directory with this variable:
-
-```
-export const environment = {
-  DATABASE_URL:"http://localhost:3000"
-}
-```
-
-3. Then use in the CLI:
+2. Then use in the CLI:
 
 npm start
