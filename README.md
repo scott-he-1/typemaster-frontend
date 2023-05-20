@@ -4,6 +4,8 @@ Welcome to the Front end side of Type Master!
 
 npm i 
 
-2. Then use in the CLI:
+2. Run the backend server
+
+3. Then use in the CLI:
 
 npm start
