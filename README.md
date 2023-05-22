@@ -14,8 +14,6 @@ The features and functionalities of the site includes:
 
 • The user can check the leaderboards in the highscores section
 
-
-
 The app was built with:
 
 • Angular
@@ -29,4 +27,3 @@ The app was built with:
 • PostgreSQL
 
 • Prisma
-
