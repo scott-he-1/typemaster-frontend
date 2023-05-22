@@ -50,7 +50,9 @@ export class RegisterComponent implements OnInit {
             .subscribe({
               next: (userToken) => {
                 localStorage.setItem('userToken', JSON.stringify(userToken));
-                this.router.navigate(['play']);
+                this.router
+                  .navigate(['/'])
+                  .then(() => window.location.reload());
               },
               error: (error) => console.error(error),
             });

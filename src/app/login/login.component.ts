@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
         .subscribe((userToken) => {
           localStorage.setItem('userToken', JSON.stringify(userToken));
           this.success = true;
-          this.router.navigate(['play']);
+          this.router.navigate(['/']).then(() => window.location.reload());
         });
     } catch (error) {
       console.error(error);
