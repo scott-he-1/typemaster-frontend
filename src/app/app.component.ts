@@ -21,6 +21,6 @@ export class AppComponent implements OnInit {
   logout() {
     localStorage.removeItem('userToken');
     this.currentToken = null;
-    this.router.navigate(['login']).then(() => window.location.reload());
+    this.router.navigate(['login']);
   }
 }
