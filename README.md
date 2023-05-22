@@ -4,7 +4,7 @@ This web app is a game that tests a player's typing speed and accuracy by keepin
 
 The features and functionalities of the site includes:
 
-• Authentication and Authorization with JSON Web Tokens (JWT)
+• Authentication and Authorization of users with JSON Web Tokens (JWT)
 
 • The user can create an account
 
