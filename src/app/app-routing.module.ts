@@ -7,8 +7,8 @@ import { HighScoresComponent } from './high-scores/high-scores.component';
 import { UserGuard } from './user.guard';
 
 const routes: Routes = [
-  { path: '', component: PlayComponent },
-  { path: 'play', component: PlayComponent },
+  { path: '', component: PlayComponent, canActivate: [UserGuard] },
+  { path: 'play', component: PlayComponent, canActivate: [UserGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'highscores', component: HighScoresComponent },
