@@ -1,3 +1,3 @@
 export const environment = {
-  DATABASE_URL:"https://typemaster-backend.onrender.com"
+  DATABASE_URL:"typemaster-backend-production.up.railway.app"
 }
