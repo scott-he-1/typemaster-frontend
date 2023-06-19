@@ -3,6 +3,7 @@
   (ngSubmit)="onRegister()"
   class="formContainer"
 >
+  <a routerLink="/login" style="color: aqua">Back</a>
   <div>Email</div>
   <input type="text" formControlName="email" class="formInput" />
   <div *ngIf="email?.invalid && email?.touched" class="formError">
